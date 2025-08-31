@@ -1,6 +1,5 @@
 package com.varun.InventoryManagementSystem.models;
 
-import com.varun.InventoryManagementSystem.enums.UserRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -12,7 +11,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
+
 
 @Entity
 @AllArgsConstructor
@@ -22,6 +21,7 @@ import java.util.List;
 @Builder
 public class Product {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "Please provide name")
